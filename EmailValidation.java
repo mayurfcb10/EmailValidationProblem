@@ -1,3 +1,4 @@
+
 /* Welcome to the Email Validation Problem */
 
 import java.util.*;
@@ -38,6 +39,17 @@ public class EmailValidation {
 			System.out.println(patternValidate+" does not match the Format");
 		}
 	} 
+	
+	public static void ValidatePatternUC4(String patternValidate) {
+
+		boolean matcher = patternValidate.matches("[._+-]+[A-Za-z]+");
+
+		if(matcher == true) {
+			System.out.println(patternValidate+" matches the Email Format");
+		}else {
+			System.out.println(patternValidate+" does not match the Format");
+		}
+	} 
 
 	public static void main(String[] args) {
 
@@ -45,7 +57,7 @@ public class EmailValidation {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the email pattern to be validated");
 		String patternValidate = sc.nextLine();
-		ValidatePatternUC3(patternValidate);
+		ValidatePatternUC4(patternValidate);
 
 	}
 }
