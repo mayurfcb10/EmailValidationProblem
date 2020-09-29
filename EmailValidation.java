@@ -1,6 +1,4 @@
-
 /* Welcome to the Email Validation Problem */
-
 import java.util.*;
 
 public class EmailValidation {
@@ -50,6 +48,17 @@ public class EmailValidation {
 			System.out.println(patternValidate+" does not match the Format");
 		}
 	} 
+	
+	public static void ValidatePatternUC5(String patternValidate) {
+
+		boolean matcher1 = patternValidate.matches("([.][A-Za-z]{2,4})");
+
+		if(matcher1 == true) {
+			System.out.println(patternValidate+" matches the Email Format");
+		}else {
+			System.out.println(patternValidate+" does not match the Format");
+		}
+	} 
 
 	public static void main(String[] args) {
 
@@ -57,7 +66,7 @@ public class EmailValidation {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the email pattern to be validated");
 		String patternValidate = sc.nextLine();
-		ValidatePatternUC4(patternValidate);
+		ValidatePatternUC5(patternValidate);
 
 	}
 }
